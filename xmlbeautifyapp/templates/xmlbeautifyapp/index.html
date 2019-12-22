@@ -1,0 +1,31 @@
+{% extends "xmlbeautifyapp/base.html" %}
+
+{% block title %}
+    <title>Home-XMLBeautifier</title>
+{% endblock %}
+    
+
+{% block tab_line %}
+<div>
+<br/>
+<p>"The <i>XMLBeautifier</i> helps you to beautify unformatted XML code. Let's beautify!"</p>
+</div>
+{%endblock%}
+
+{% block body_block %}
+<form id="form1" action="{% url 'output' %}">
+<div class="form-group">
+  <textarea class="form-control" name="xml_code" cols="40" rows="17" placeholder="Copy your XML code here"></textarea>
+  <small>Warning: Please do not submit documents with sensitive information.</small>
+  <br/>
+  <input type="submit" value="Beautify" class="btn btn-outline-dark">
+</div>
+
+<!--
+<div>
+  <p><b><a href="" style="color:grey">Upload XML</a> | <a href="" style="color:grey">Upload ZIP</a></b></p>
+</div>
+</form>
+-->
+
+{% endblock %}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% block title %}
+    {% endblock %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+    div {
+      text-align: center;
+    }
+    #intro_div{
+      text-align: left;
+    }
+
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: grey;
+   text-align: center;
+}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<a class="navbar-brand" href="{% url 'index' %}"><i>XMLBeautifier</i></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ">
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'about' %}">About</a>
+  </li>
+</ul>
+</div>
+</nav>
+
+{% block script_block %}
+{% endblock %}
+</head>
+<body>
+
+{% block tab_line %}
+{%endblock%}
+
+{% block body_block %}
+      {% endblock %}
+
+
+
+<!--
+<footer>
+  <div align="center">
+    <p><b>_________________________________________________________________________________________________________</b></p>
+    <p>Developed by Chetan Pawar, {% now "Y" %}</p>
+    
+  </div>
+</footer>
+-->
+
+<div class="footer" align="center">
+  <p>Developed by Chetan Pawar, {% now "Y" %}</p>
+</div>
+
+
+  </body>
+</html>

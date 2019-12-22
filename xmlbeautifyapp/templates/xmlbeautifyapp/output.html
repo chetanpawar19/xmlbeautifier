@@ -1,0 +1,24 @@
+{% extends "xmlbeautifyapp/base.html" %}
+
+
+{% block script_block %}
+<script>
+function copyCode() {
+  var copyText = document.getElementById("xml_code");
+  copyText.select();
+  document.execCommand("copy");
+}
+</script>
+{% endblock %}
+
+{% block body_block %}
+
+
+<div class="form-group">
+  <br/>
+  <textarea class="form-control" id="xml_code" name="xml_code" cols="40" rows="17">{{ formatted_xml_str }}</textarea>
+  <br/>
+  <button onclick="copyCode()"  class="btn btn-outline-dark">Copy XML</button>
+</div>
+
+{% endblock %}
